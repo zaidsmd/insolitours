@@ -20,6 +20,8 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
           integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--    flatpickr-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Explore Philipines</title>
 </head>
 <body>
@@ -66,7 +68,9 @@
             </div>
             <div class="buttons">
                 <a href="#details" class="btn-secondary">Know more</a>
-                <a href="" class="btn-primary">Book now</a>
+                <a href="" class="btn-primary" data-bs-toggle="offcanvas"
+                   data-bs-target="#offcanvasExample"
+                   aria-controls="offcanvasExample">Book now</a>
             </div>
         </div>
         <div class="social-media">
@@ -198,7 +202,8 @@
                 <h1>BOOK NOW</h1>
                 <h3>Explore philipines with us , customize your trip , be in contact 24/7 </h3>
             </div>
-            <a href="" class="btn-primary">Book now</a>
+            <a class="btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button">Book
+                now</a>
         </div>
     </section>
     <!--    reviews -->
@@ -375,6 +380,39 @@
     </section>
     <!--    footer-->
 </main>
+<div class="offcanvas offcanvas-start"
+     tabindex="-1"
+     id="offcanvasExample"
+     aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+            Select travel details
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <h3 class="text-center text-black">Book</h3>
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" id="floatingInput" class="form-control" placeholder="select date of your travel">
+                <label for="floatingInput">Date of travel</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected> 1 Traveler</option>
+                    <option value="1">2 Travelers</option>
+                    <option value="2">3 Travelers</option>
+                </select>
+                <label for="floatingSelect">Travelers</label>
+            </div>
+        </form>
+        <div class="end">
+            <a class="btn price disabled" role="button" aria-disabled="true">Total: 477.80 USD</a>
+            <a class="btn-primary price " role="button">Validate</a>
+        </div>
+    </div>
+</div>
+
 <footer>
     <div class="section-container" id="footer-container">
         <div class="social-media">
@@ -425,6 +463,15 @@
         $(".owl-prev").html('<i class="fa fa-chevron-left"></i>');
         $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
     });
+    const pickrconfig = {
+        mode: "range",
+        minDate: "today",
+    }
+    $(document).ready(function () {
+        flatpickr("#floatingInput", pickrconfig);
+    });
 </script>
+<!--flatpickr-->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>

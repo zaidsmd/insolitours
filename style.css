@@ -711,6 +711,43 @@ footer .social-media::after {
 }
 
 /*footer styling ends*/
+/*off canvas*/
+.offcanvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.end {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.end a {
+    text-align: center;
+}
+
+.end a:hover {
+    scale: 1;
+}
+
+#floatingInput {
+    width: 100%;
+    line-height: 2rem;
+}
+
+#floatingInput:focus, #floatingSelect:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgb(255 110 64 / 25%);
+}
+
 /*media query*/
 /*idk how i've did that but it works*/
 @media only screen and (max-width: 1280px) {
@@ -845,8 +882,6 @@ footer .social-media::after {
         border-radius: 0 0 0 7rem;
     }
 
-    
-
     .btn-primary {
         padding: 0.6rem 2rem !important;
     }
@@ -859,6 +894,7 @@ footer .social-media::after {
         gap: 1.2rem;
         width: auto;
     }
+
     a {
         font-size: 0.9rem;
         padding: 0.6rem 0.9rem !important;

@@ -847,7 +847,7 @@ footer .social-media::after {
 
     a {
         font-size: 1rem;
-        padding: 0.6rem 1.5rem !important;
+        padding: 0.6rem 1rem !important;
     }
 
     .btn-primary {
@@ -856,6 +856,11 @@ footer .social-media::after {
 
     .btn-secondary {
         padding: 0.6rem 2rem !important;
+    }
+
+    footer .icons {
+        gap: 1.2rem;
+        width: auto;
     }
 }
 
@@ -922,5 +927,9 @@ footer .social-media::after {
 
     .sponsor:last-child {
         width: 40%;
+    }
+
+    nav {
+        height: 60px;
     }
 }

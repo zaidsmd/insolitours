@@ -718,16 +718,42 @@ footer .social-media::after {
     justify-content: center;
 }
 
+.offcanvas-title {
+    font-size: 20px;
+}
+
+.offcanvas-body h3 {
+    font-size: 30px;
+}
+
+.offcanvas-body label {
+    font-size: 16px;
+}
+
+#floatingInput {
+    height: 54px;
+    font-size: 16px;
+}
+
+#floatingSelect {
+    height: 54px;
+    font-size: 16px;
+}
+
+.offcanvas a {
+    font-size: 16px;
+}
+
 .offcanvas-body {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 48px;
 }
 
 .end {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .end a {
@@ -740,7 +766,7 @@ footer .social-media::after {
 
 #floatingInput {
     width: 100%;
-    line-height: 2rem;
+    line-height: 32px;
 }
 
 #floatingInput:focus, #floatingSelect:focus {

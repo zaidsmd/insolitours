@@ -845,10 +845,7 @@ footer .social-media::after {
         border-radius: 0 0 0 7rem;
     }
 
-    a {
-        font-size: 0.9rem;
-        padding: 0.6rem 0.9rem !important;
-    }
+    
 
     .btn-primary {
         padding: 0.6rem 2rem !important;
@@ -861,6 +858,10 @@ footer .social-media::after {
     footer .icons {
         gap: 1.2rem;
         width: auto;
+    }
+    a {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.9rem !important;
     }
 }
 

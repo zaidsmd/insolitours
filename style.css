@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: circle;
+    overflow: hidden;
+}
+
+:root {
+    --primary-color: #FF6E40;
+    --secondary-color: #01898C;
+    --highlight: #E0E0E0;
+    --lighter: #AEABAB;
+    --gray-color: #9E9E9E;
+    --bg-secondary: rgba(1, 137, 140, 0.2);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    /*font-size: 1.2vw !important;*/
+}
+
+/*a {*/
+/*    font-size: 1.2vw !important;*/
+/*}*/
+
+body {
+    position: relative;
+}
+
+h1 {
+    font-size: 8vw;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 2vw;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+p {
+    margin: 0;
+}
+
+/*navbar styling starts*/
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 0 10%;
+    position: fixed;
+    z-index: 9;
+    overflow: visible;
+}
+
+#navbar {
+    background-color: #ffffff;
+    border-radius: 0 0 3rem 3rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 4%;
+}
+
+#logo {
+    width: 9.5rem;
+}
+
+#logo a img {
+    width: 100%;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#search i {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+/*navbar styling end */
+/*background styling start*/
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.background-1 {
+    background-image: url("https://images.pexels.com/photos/1714455/pexels-photo-1714455.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.background-2 {
+    background-image: url("https://images.pexels.com/photos/2524370/pexels-photo-2524370.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.background-3 {
+    background-image: url("https://images.unsplash.com/photo-1515511210479-bc02c48ec763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+[data-bs-target="#carouselExampleIndicators"] {
+    border-radius: 50% !important;
+    height: 1rem !important;
+    width: 1rem !important;
+    background-color: #ffffff !important;
+    opacity: 100% !important;
+}
+
+[aria-current="true"] {
+    background-color: var(--primary-color) !important;
+}
+
+/*background styling ends*/
+/*section styling starts*/
+section {
+}
+
+.section-container {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*section styling end*/
+/*home styling starts*/
+#home {
+    height: 100vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+#home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home .buttons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.buttons {
+    overflow: visible;
+}
+
+#line-above::before {
+    content: "";
+    width: 20%;
+    height: 0.5rem;
+    display: block;
+    border-radius: 99px;
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 3rem;
+    border-radius: 0.7rem;
+    transition: all linear 300ms;
+    position: relative;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 3rem;
+    border-radius: 0.7rem;
+    scale: 1.1;
+}
+
+.btn-secondary:hover::before {
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    display: unset;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 3.9rem;
+    border-radius: 0.7rem;
+    transition: all linear 300ms;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 3.9rem;
+    border-radius: 0.7rem;
+    scale: 1.1;
+}
+
+.btn-primary:hover::before {
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    height: 100%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.8rem;
+    align-items: center;
+    height: 30%;
+}
+
+.social-media::before {
+    height: 30%;
+    width: 0.3rem;
+    content: "";
+    display: block;
+    background-color: white;
+    border-radius: 99px;
+}
+
+.social-media::after {
+    height: 30%;
+    width: 0.3rem;
+    content: "";
+    display: block;
+    background-color: white;
+    border-radius: 99px;
+}
+
+.icons i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    position: relative;
+}
+
+/*home styling ends*/
+/*details styling starts*/
+#details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.card {
+    border-radius: 2rem;
+    width: 90%;
+    padding: 3% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    border: none !important;
+}
+
+.card-primary {
+    background-color: var(--primary-color);
+}
+
+.card-secondary {
+    background-color: var(--secondary-color);
+}
+
+.mini-cards {
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#details ul li:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+.card-text li {
+    font-size: 1.25rem;
+    list-style: circle;
+}
+
+.mini-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 3% 5%;
+    background-color: var(--highlight);
+    border-radius: 1.5rem;
+}
+
+.icon i {
+    font-size: 2.7rem;
+}
+
+.mini-card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.mini-card:nth-child(odd) i {
+    color: var(--primary-color);
+}
+
+.mini-card:nth-child(odd) .mini-card-text {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.mini-card:nth-child(even) i {
+    color: var(--secondary-color);
+}
+
+.mini-card:nth-child(even) .mini-card-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/*details styling end*/
+
+/*daily styling start*/
+#daily-itinerary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    overflow: visible;
+}
+
+#daily-itinerary .buttons {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: flex-end;
+    overflow: visible;
+}
+
+#daily-itinerary .button {
+    width: 90%;
+    cursor: pointer;
+    transition: all linear 350ms;
+    padding: 0 0 0 2rem;
+
+}
+
+#daily-itinerary .mini-card-head {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#daily-itinerary .mini-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background-color: #ffffff;
+}
+
+#daily-itinerary .mini-card > .mini-card-text {
+    color: rgba(0, 0, 0, .6);
+    font-size: 1rem;
+}
+
+#daily-itinerary .button:nth-child(odd) .mini-card-head > .mini-card-text {
+    color: var(--primary-color);
+}
+
+#daily-itinerary .mini-card-head .mini-card-text {
+    font-size: 1.1rem;
+}
+
+#daily-container .active {
+    padding: 0 0 0 0;
+}
+
+#daily-container {
+    background-color: var(--bg-secondary);
+    border-radius: 0 9rem 0 0;
+}
+
+#daily-container .frame.active {
+    width: 100% !important;
+    display: block;
+}
+
+#daily-container .frame {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2.2rem;
+    display: none;
+    scale: 1;
+}
+
+#frame1 {
+    background-image: url("https://gttp.imgix.net/295998/x/0/dream-islet-aerial-shot-in-mithi-resort.jpg");
+}
+
+#frame2 {
+    background-image: url("https://gttp.imgix.net/295999/x/0/cambagat-cave-in-mithi-resort.jpg");
+}
+
+#frame3 {
+    background-image: url("https://gttp.imgix.net/296000/x/0/seaview-bedroom-in-mithi-resort.jpg");
+}
+
+#frame4 {
+    background-image: url("https://gttp.imgix.net/296001/x/0/small-pool-area-with-the-ocean-view-at-a-seaview-villa-in-mithi-resort.jpg");
+}
+
+/*daily styling ends*/
+/*call to action styling starts*/
+#call-to-action {
+    background-color: var(--bg-secondary);
+}
+
+#call-to-action-container {
+    background-image: url("https://images.pexels.com/photos/2524366/pexels-photo-2524366.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 9rem 0 9rem 0;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+#call-to-action h1 {
+    text-align: center;
+}
+
+/*call to action styling ends*/
+/*reviews styling starts*/
+#reviews .card {
+    padding: 1% 6%;
+    background-color: transparent !important;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.card-inside {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+    background-color: white;
+    padding: 3% 2%;
+    border-radius: 2rem;
+}
+
+.card-head {
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    display: flex;
+    flex-direction: row;
+    gap: 1.1rem;
+    align-items: center;
+}
+
+.card-head p:first-child {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.card-head p:last-child {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.card-inside .profile {
+    width: 5rem !important;
+    height: 5rem !important;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+.card-body {
+    font-size: 1.2rem;
+    opacity: 85%;
+}
+
+.owl-prev i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.owl-next:hover {
+    background-color: transparent !important;
+}
+
+.owl-prev:hover {
+    background-color: transparent !important;
+}
+
+.owl-prev:hover i {
+    scale: 1.2;
+}
+
+.owl-next:hover i {
+    scale: 1.2;
+}
+
+.owl-prev {
+    transition: all linear 300ms;
+}
+
+.owl-next {
+    transition: all linear 300ms;
+}
+
+.owl-next i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+#reviews {
+    background-color: #ffffff;
+}
+
+#reviews-container {
+    background-color: var(--bg-secondary);
+    border-radius: 0 0 0 9rem;
+}
+
+/*reviews styling ends*/
+/*locations styling starts*/
+#locations .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#locations .button-map.active {
+    background-color: transparent !important;
+
+}
+
+#locations .button-map:nth-child(even).active {
+    border: solid 0.15rem var(--primary-color);
+    color: var(--primary-color);
+    transition: all linear 300ms;
+}
+
+#locations .button-map:nth-child(odd).active {
+    border: solid 0.15rem var(--secondary-color);
+    color: var(--secondary-color);
+    scale: 1.1;
+}
+
+.map {
+    border-radius: 0.7rem;
+    width: 85%;
+    height: 60vh;
+}
+
+.map-container {
+    display: none;
+}
+
+.map-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*locations styling ends*/
+/*sponsors styling starts */
+#sponsors-container {
+    background-color: var(--bg-secondary);
+    border-radius: 9rem 0 0 0;
+}
+
+.sponsors-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.sponsor img {
+    width: 100%;
+}
+
+.sponsor {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor:last-child {
+    width: 10%;
+}
+
+/*sponsors styling ends */
+/*footer styling starts*/
+footer {
+    background-color: var(--bg-secondary);
+}
+
+#footer-container {
+    border-radius: 0 9rem 0 0;
+    background-color: #ffffff;
+}
+
+footer .social-media {
+    flex-direction: row;
+}
+
+footer .icons {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
+
+footer .social-media::before {
+    width: 30%;
+    height: 0.3rem;
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    border-radius: 99px;
+}
+
+footer .social-media::after {
+    width: 30%;
+    height: 0.3rem;
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    border-radius: 99px;
+}
+
+/*footer styling ends*/
+/*media query*/
+/*idk how i've did that but it works*/
+@media only screen and (max-width: 1280px) {
+    #details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: repeat(2, 1fr);
+    }
+
+    .mini-cards {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 0 0;
+        column-gap: 5rem;
+        width: 95%;
+    }
+
+    #daily-itinerary {
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #daily-itinerary .button {
+        width: 100%;
+        padding: 0;
+    }
+
+    #daily-itinerary .button.active {
+        scale: 1.05;
+    }
+
+    #home {
+        padding: 10% 5% 0 5%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    #details {
+        font-size: 15px;
+    }
+
+    #details .card-title {
+        font-size: 2em;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #details .card-text {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #details li {
+        font-size: 17px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #details {
+        font-size: 13px;
+    }
+
+    #details .card-title {
+        font-size: 2em;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #details .card-text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #details li {
+        font-size: 13px;
+    }
+
+    #details-grid .mini-cards {
+        grid-template-columns: none;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #details-grid .card-secondary {
+        padding: 0 2% 0 0;
+    }
+
+    .icon i {
+        font-size: 2rem;
+    }
+
+    .mini-card-title {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .mini-card-text {
+        font-size: 1em;
+    }
+
+    #footer-container {
+        border-radius: 0 7rem 0 0;
+    }
+
+    #sponsors-container {
+        border-radius: 7rem 0 0 0;
+    }
+
+    #daily-container {
+        border-radius: 0 7rem 0 0;
+    }
+
+    #call-to-action-container {
+        border-radius: 7rem 0 7rem 0;
+    }
+
+    #reviews-container {
+        border-radius: 0 0 0 7rem;
+    }
+
+    a {
+        font-size: 1rem;
+        padding: 0.6rem !important;
+    }
+
+    .btn-primary {
+        padding: 0.6rem !important;
+    }
+
+    .btn-secondary {
+        padding: 0.6rem !important;
+    }
+}
+
+@media only screen and (max-width: 755px) {
+    #details-grid {
+        grid-template-columns: 1fr;
+        grid-row: repeat(3, 1fr);
+    }
+
+    .card {
+        padding-bottom: 3% !important;
+    }
+
+    .mini-cards {
+        grid-area: 3/1;
+    }
+
+    #details .card-text {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #details li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and  (max-width: 576px) {
+    :root {
+        font-size: 10px;
+    }
+
+    #home, #background {
+        height: 90vh;
+    }
+
+    #home .social-media::before,
+    #home .social-media::after {
+        height: 20%;
+    }
+
+    .map {
+        height: 40vh;
+    }
+}

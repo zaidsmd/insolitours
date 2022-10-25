@@ -769,6 +769,17 @@ footer .social-media::after {
     #details li {
         font-size: 17px;
     }
+
+    .sponsor {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sponsor:last-child {
+        width: 40%;
+    }
 }
 
 
@@ -836,15 +847,15 @@ footer .social-media::after {
 
     a {
         font-size: 1rem;
-        padding: 0.6rem !important;
+        padding: 0.6rem 1.5rem !important;
     }
 
     .btn-primary {
-        padding: 0.6rem !important;
+        padding: 0.6rem 2rem !important;
     }
 
     .btn-secondary {
-        padding: 0.6rem !important;
+        padding: 0.6rem 2rem !important;
     }
 }
 
@@ -888,5 +899,28 @@ footer .social-media::after {
 
     .map {
         height: 40vh;
+    }
+
+    #details .card-title {
+        font-size: 1.7em;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #details .card-text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #details li {
+        font-size: 14px;
+    }
+
+    .sponsor {
+        width: 60%;
+    }
+
+    .sponsor:last-child {
+        width: 40%;
     }
 }

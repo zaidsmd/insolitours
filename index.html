@@ -59,7 +59,7 @@
         </div>
     </div>
     <!--    home    -->
-    <section id="home">
+    <section id="home" aria-label="Home">
         <div class="container">
             <div class="text">
                 <h1 id="line-above">Explore</h1>
@@ -82,9 +82,9 @@
         </div>
     </section>
     <!--    Details -->
-    <section id="details">
+    <section id="details" aria-labelledby="details-title">
         <div id="details-container" class="section-container">
-            <h4 class="title">Details</h4>
+            <h5 class="title" id="details-title">Details</h5>
             <div class="container-fluid" id="details-grid">
                 <div class="card-primary card ">
                     <p class="card-title">Description</p>
@@ -140,9 +140,9 @@
         </div>
     </section>
     <!--    Daily itinerary-->
-    <section id="daily">
+    <section id="daily" aria-labelledby="daily-title">
         <div id="daily-container" class="section-container">
-            <h4 class="title">Daily Itinerary</h4>
+            <h5 class="title" id="daily-title">Daily Itinerary</h5>
             <div class="container-fluid" id="daily-itinerary">
                 <div class="img">
                     <div class="frame active" id="frame1"></div>
@@ -196,7 +196,7 @@
         </div>
     </section>
     <!--    call to action-->
-    <section id="call-to-action">
+    <section id="call-to-action" aria-label="CTA">
         <div class="section-container" id="call-to-action-container">
             <div class="text">
                 <h1>BOOK NOW</h1>
@@ -207,9 +207,9 @@
         </div>
     </section>
     <!--    reviews -->
-    <section id="reviews">
+    <section id="reviews" aria-labelledby="reviews-title">
         <div class="section-container" id="reviews-container">
-            <h4 class="title">What people think about us</h4>
+            <h5 class="title" id="reviews-title">What people think about us</h5>
             <div class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="card">
@@ -217,6 +217,7 @@
                             <div class="card-head">
                                 <div class="profile">
                                     <img src="https://gttp.imgix.net/374977/x/0/aoh14ghxx-lyk-4vpdiwzgyurof1cukhnm-57mqvqwzvea-s96-c-jpg"
+                                         alt="reviewer"
                                     >
                                 </div>
                                 <div class="text">
@@ -245,7 +246,7 @@
                         <div class="card-inside">
                             <div class="card-head">
                                 <div class="profile">
-                                    <img src=https://gttp.imgix.net/380445/x/0/1-ph.jpg">
+                                    <img src="https://gttp.imgix.net/380445/x/0/1-ph.jpg" alt="reviewer">
                                 </div>
                                 <div class="text">
                                     <p>lben</p>
@@ -270,7 +271,7 @@
                             <div class="card-head">
                                 <div class="profile">
                                     <img src="https://gttp.imgix.net/373502/x/0/aoh14gg6-za2m05c26c9fwflprmjecrnadndbzkvsh-vow-s96-c-jpg"
-                                         alt="">
+                                         alt="reviewer">
                                 </div>
                                 <div class="text">
                                     <p>Geniffe Charmaine Din</p>
@@ -295,7 +296,7 @@
                             <div class="card-head">
                                 <div class="profile">
                                     <img src="https://gttp.imgix.net/372720/x/0/1-ph.jpg?auto=format%2Ccompress&crop=faces&fit=crop&w=64&h=64&dpr=1&q=75"
-                                         alt="">
+                                         alt="reviewer">
                                 </div>
                                 <div class="text">
                                     <p>Hazel Chung</p>
@@ -319,8 +320,9 @@
         </div>
     </section>
     <!--    locations   -->
-    <section id="locations">
+    <section id="locations" aria-labelledby="locations-title">
         <div class="section-container" id="location-container">
+            <h5 class="title" id="locations-title">Locations</h5>
             <div class="buttons">
                 <button class="btn-secondary button-map active" id="button-start" onclick="mapStars()">Starts</button>
                 <button class="btn-primary button-map" id="button-hotel" onclick="mapHotel()">Hotel</button>
@@ -329,21 +331,21 @@
             <div class="maps">
                 <div id="starts-map" class="map-container active">
                     <div class="map">
-                        <iframe width="100%" height="100%"
+                        <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.5190143935324!2d121.01202332886187!3d14.512279050703135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cec5d2bb4d77%3A0x8a24fa628a114411!2sNinoy%20Aquino%20International%20Airport!5e0!3m2!1sen!2sma!4v1666700103600!5m2!1sen!2sma"></iframe>
                         <br/>
                     </div>
                 </div>
                 <div id="hotel-map" class="map-container">
                     <div class="map">
-                        <iframe width="100%" height="100%"
+                        <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1604.297262216604!2d123.80112575313335!3d9.625883544085717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abad46521b8163%3A0x2215bafe29690194!2sMithi%20Resort%20and%20Spa!5e1!3m2!1sen!2sma!4v1666700839661!5m2!1sen!2sma"></iframe>
                         <br/>
                     </div>
                 </div>
                 <div id="ends-map" class="map-container">
                     <div class="map">
-                        <iframe width="100%" height="100%"
+                        <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61776.703516403286!2d120.90780080892215!3d14.59657040669775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca03571ec38b%3A0x69d1d5751069c11f!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sma!4v1666700989534!5m2!1sen!2sma"></iframe>
                         <br/>
                     </div>
@@ -352,9 +354,9 @@
         </div>
     </section>
     <!--    sponsors-->
-    <section id="sponsors">
+    <section id="sponsors" aria-labelledby="sposors-title">
         <div class="section-container" id="sponsors-container">
-            <h4 class="title">Sponsors</h4>
+            <h5 class="title" id="sposors-title">Sponsors</h5>
             <div class="sponsors-container">
                 <div class="sponsor">
                     <img src="https://logos-world.net/wp-content/uploads/2020/03/Turkish-Airlines-Logo.png"
@@ -380,6 +382,7 @@
     </section>
     <!--    footer-->
 </main>
+<!--offcanvas-->
 <div class="offcanvas offcanvas-start"
      tabindex="-1"
      id="offcanvasExample"
@@ -412,7 +415,6 @@
         </div>
     </div>
 </div>
-
 <footer>
     <div class="section-container" id="footer-container">
         <div class="social-media">
@@ -442,7 +444,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
             loop: true,

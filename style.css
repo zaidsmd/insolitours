@@ -760,8 +760,17 @@ footer .social-media::after {
     gap: 8px;
 }
 
+.end a.active {
+    display: block;
+}
+
 .end a {
     text-align: center;
+    display: none;
+}
+
+.end a:last-child {
+    display: block !important;
 }
 
 .end a:hover {

@@ -9,7 +9,6 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--    font awesome-->
     <script src="https://kit.fontawesome.com/a5fdcae6a3.js" crossorigin="anonymous"></script>
-
     <!--    main css-->
     <link rel="stylesheet" href="style.css">
     <!--    owl carrousel cdn-->
@@ -403,7 +402,7 @@
             </div>
             <div class="form-floating mb-3">
                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected> 1 Traveler</option>
+                    <option selected>1 Traveler</option>
                     <option value="1">2 Travelers</option>
                     <option value="2">3 Travelers</option>
                 </select>
@@ -411,8 +410,10 @@
             </div>
         </form>
         <div class="end">
-            <a class="btn price disabled" role="button" aria-disabled="true">Total: 477.80 USD</a>
-            <a class="btn-primary price " role="button">Validate</a>
+            <a class="btn price disabled active" id="1travler" role="button" aria-disabled="true">Total: 477.80 USD</a>
+            <a class="btn price disabled" id="2travler" role="button" aria-disabled="true">Total: 977.80 USD</a>
+            <a class="btn price disabled" id="3travler" role="button" aria-disabled="true">Total: 1277.80 USD</a>
+            <a class="btn-primary price" role="button">Validate</a>
         </div>
     </div>
 </div>
@@ -473,6 +474,35 @@
     $(document).ready(function () {
         flatpickr("#floatingInput", pickrconfig);
     });
+    var mySelect = document.getElementById('floatingSelect');
+    mySelect.onchange = (event) => {
+        var inputText = event.target.value;
+        if (inputText == "1 Traveler") {
+            const buttons = document.querySelectorAll('.price');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+                const affectFrame = document.getElementById("1travler");
+                affectFrame.classList.add("active")
+            }
+        }
+        if (inputText == "1") {
+            const buttons = document.querySelectorAll('.price');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+                const affectFrame = document.getElementById("2travler");
+                affectFrame.classList.add("active")
+            }
+        }
+        if (inputText == "2") {
+            const buttons = document.querySelectorAll('.price');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+                const affectFrame = document.getElementById("3travler");
+                affectFrame.classList.add("active")
+            }
+        }
+    }
+
 </script>
 <!--flatpickr-->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

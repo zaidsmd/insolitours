@@ -109,3 +109,5 @@ function mapEnds() {
     const affectButton = document.getElementById("button-end");
     affectButton.classList.add("active")
 }
+
+
